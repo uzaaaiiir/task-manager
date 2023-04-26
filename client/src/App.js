@@ -1,8 +1,9 @@
 import "./App.css";
-import SignIn from "./components/SignIn";
 
 function App() {
-  return <SignIn />;
+  return <h1>Hello World!</h1>;
 }
 
 export default App;
+
+// TODO: Add components
