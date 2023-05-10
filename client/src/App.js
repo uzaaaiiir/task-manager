@@ -1,9 +1,26 @@
 import "./App.css";
+import { useState } from "react";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+// react-bootstrap components
+import Button from "react-bootstrap/Button";
+
+// my components
+import NavBar from "./components/NavBar";
+import SignUpModal from "./components/SignUpModal";
 
 function App() {
-  return <h1>Hello World!</h1>;
+    const [modalShow, setModalShow] = useState(false);
+
+    return (
+        <>
+            <NavBar />
+            <Button variant="primary" onClick={() => setModalShow(true)}>
+                Sign Up
+            </Button>
+
+            <SignUpModal show={modalShow} onHide={() => setModalShow(false)} />
+        </>
+    );
 }
 
 export default App;
